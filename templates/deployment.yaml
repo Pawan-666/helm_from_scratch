@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.appName }}
-  namespace: default
+  namespace: {{ .Values.namespace }}
   labels:
     app: {{ .Values.appName }}
 spec:
@@ -19,12 +19,12 @@ spec:
     spec: # Pod spec
       containers:
       - name: mycontainer
-        image: devopsjourney1/mywebapp:latest
+        image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"       # "" string value used
         ports:
         - containerPort: 80
         envFrom:
         - configMapRef:
-            name: myconfigmapv1.0
+            name: {{ .Values.configmap.name }}
         resources:
           requests:
             memory: "16Mi" 
