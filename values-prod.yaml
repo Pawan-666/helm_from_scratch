@@ -1,0 +1,7 @@
+# appName: myhelmapp
+
+namespace: prod
+
+configmap:   
+  data:
+    CUSTOM_HEADER:  "Deploying in production, welcome"

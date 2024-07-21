@@ -1,2 +1,3 @@
-map the nodeport port to curl:[nodeport]
+{{ .Values.namespace }}
+map the nodeport port to `curl localhost:[nodeport]`
 displayed on running `k get svc` to check whether the deployment is working on not from command line
