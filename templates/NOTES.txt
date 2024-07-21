@@ -1,0 +1,2 @@
+map the nodeport port to curl:[nodeport]
+displayed on running `k get svc` to check whether the deployment is working on not from command line
