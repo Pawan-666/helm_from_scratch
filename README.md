@@ -176,7 +176,7 @@ spec:
 
 ```
 
-# cat values.yaml
+#### cat values.yaml
 
 ```
 appName: myhelmapp
